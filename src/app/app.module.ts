@@ -13,7 +13,12 @@ import { RecipeComponent } from './recipe-book/recipe.component';
 import { HeaderComponent } from './template/header.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
-
+import { UnlessDirective } from './directives/unless.directive';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingService } from './shopping/shopping.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipe-book/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +32,18 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
     RecipeComponent,
     HeaderComponent,
     HighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective,
+    DropdownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule, 
-    FormsModule
+    FormsModule, 
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

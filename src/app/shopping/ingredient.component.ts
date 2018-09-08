@@ -7,7 +7,7 @@ import { Ingredient } from '../shared/ingredient.model';
   styleUrls: ['./ingredient.component.css']
 })
 export class IngredientComponent implements OnInit {  
-  constructor() { }
+  constructor( ) { }
 
   @Input() ingredient: Ingredient; 
 

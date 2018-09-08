@@ -4,10 +4,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe *ngIf="loadedFeature === 'recipe'"></app-recipe>
-      <shopping-list *ngIf="loadedFeature === 'shopping-list'"></shopping-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <p appHighlight> ESO ESTA HIGHLIGTED </p>
-  <p appBetterHighlight> ESO ESTA HIGHLIGTED </p>
+  <!-- <button (click)="toggleP=!toggleP"> Change P </button>
+  <p appHighlight
+     *appUnless="toggleP"> ESO ESTA HIGHLIGTED </p>
+  <p [appBetterHighlight] = "'red'"
+     [defaultColor] = "'yellow'"
+     *appUnless="!toggleP"
+  > ESO ESTA HIGHLIGTED </p> -->
 </div>
